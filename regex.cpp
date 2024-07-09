@@ -3,6 +3,10 @@
 #include <fstream>
 #include <iostream>
 
+//remember: lookahead(?!) lookahead(?=), back reference, \1 \2 \3 refernce capture 1 2 3 match result
+// (?:) improve priority but not capture group
+
+
 //regex_match must be completely match 
 bool isMatchYearMonthDay(const std::string_view source)
 {
