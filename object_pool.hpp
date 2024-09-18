@@ -19,7 +19,7 @@ class ObjectPool
         explicit ObjectPool(const Allocator& allocator):m_allocator(allocator){}
         virtual ~ObjectPool()
         {
-            assert(m_freeObjects.size() == (m_initChunkSize * std::pow(2, m_pool.size()) - 1));
+            assert(m_freeObjects.size() == m_initChunkSize * (std::pow(2, m_pool.size()) - 1));
 
             auto chunksize{m_initChunkSize};
             for(auto& chunk : m_pool)
